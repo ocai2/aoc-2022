@@ -15,10 +15,7 @@ def list_splitter(list, size):
         yield list[i:i+size]
 
 def find_repeat(s):
-    c1 = s[0]
-    c2 = s[1]
-    c3 = s[2]
-    return get_priority(''.join(set(c1).intersection(c2, c3)))
+    return get_priority((set(s[0]) & set(s[1]) & set(s[2])).pop())
 
 def get_priority(c):
     a = ord(c)
