@@ -13,7 +13,7 @@ def find_repeat(s):
     c1 = s[:len(s)//2]
     c2 = s[len(s)//2:]
 
-    return get_priority((''.join(set(c1).intersection(c2))))
+    return get_priority(''.join(set(c1).intersection(c2)))
 
 def get_priority(c):
     a = ord(c)
