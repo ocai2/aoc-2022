@@ -43,16 +43,6 @@ def main():
         monkey_list[i].true_monkey_num = true_monkey
         monkey_list[i].false_monkey_num = false_monkey
 
-    # for x in monkey_list:
-    #     print()
-    #     print(f'monkey = {x.number}')
-    #     print(f'items = {x.items}')
-    #     print(f'operator = {x.operator}')
-    #     print(f'value = {x.value}')
-    #     print(f'divisor = {x.divisor}')
-    #     print(f'true = {x.true_monkey_num}')
-    #     print(f'false = {x.false_monkey_num}')
-
     n_monkeys = len(data)
     current_monkey = 0
     for i in range(10000 * n_monkeys):
@@ -70,17 +60,6 @@ def main():
             current_monkey = 0
     
     monkey_list.sort(key = lambda x: x.inspect_count, reverse=True)
-    for x in monkey_list:
-        print()
-        print(f'monkey = {x.number}')
-        print(f'items = {x.items}')
-        print(f'operator = {x.operator}')
-        print(f'value = {x.value}')
-        print(f'divisor = {x.divisor}')
-        print(f'true = {x.true_monkey_num}')
-        print(f'false = {x.false_monkey_num}')
-        print(f'count = {x.inspect_count}')
-    
     print(monkey_list[0].inspect_count * monkey_list[1].inspect_count)
 
 def throw_item(item, divisor):
