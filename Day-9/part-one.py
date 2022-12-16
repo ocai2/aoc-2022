@@ -22,8 +22,8 @@ def main():
             head_position[0] += step_direction[0]
             head_position[1] += step_direction[1]
             if not is_touching(head_position, tail_position):
-                tail_position[0] = (head_position[0] > tail_position[0]) - (head_position[0] < tail_position[0])
-                tail_position[1] = (head_position[1] > tail_position[1]) - (head_position[1] < tail_position[1])
+                tail_position[0] += (head_position[0] > tail_position[0]) - (head_position[0] < tail_position[0])
+                tail_position[1] += (head_position[1] > tail_position[1]) - (head_position[1] < tail_position[1])
                 if tuple(tail_position) not in visited:
                     visited.add(tuple(tail_position))
 
